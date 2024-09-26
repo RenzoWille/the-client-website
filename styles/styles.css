@@ -1,1 +1,118 @@
-/* CSS */
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* Stijlen voor het header-gedeelte */
+header {
+    padding: 10px 0;
+}
+
+/* Flexbox voor de .topnav container */
+.topnav {
+    display: flex;
+    align-items: center; /* Items (img en links) verticaal gecentreerd */
+    justify-content: space-between; /* Ruimte tussen de afbeelding en links */
+    flex-wrap: wrap; /* Laat de links wrappen op kleinere schermen */
+}
+
+/* Stijlen voor het logo */
+.topnav img {
+    height: 75px; /* Je kunt de hoogte van het logo aanpassen */
+    width: auto; /* Zorgt ervoor dat de breedte automatisch wordt bepaald */
+}
+
+/* Stijlen voor de menu links */
+.topnav a {
+    margin-left: 10px; /* Ruimte tussen de links en het logo */
+    text-decoration: none; /* Verwijder de onderstreping van de links */
+    color: black; /* Kleur van de links */
+    font-size: 16px; /* Tekstgrootte van de links */
+}
+
+.right-links {
+    margin-left: auto; /* Zorgt ervoor dat de rechts gelokaliseerde links naar rechts worden uitgelijnd */
+    display: flex;
+}
+
+/* Optioneel: Stijlen voor het menu op kleinere schermen */
+@media (max-width: 768px) {
+    .topnav {
+        flex-direction: column; /* Stapel de img en links verticaal op kleinere schermen */
+    }
+
+    .topnav a {
+        margin: 10px 0; /* Zorgt voor ruimte tussen de links op mobiele apparaten */
+        align-items: flex-end;
+    }
+}
+
+body{
+
+    .filter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+    margin-bottom: 20px;
+}
+
+.filter #search-input {
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.filter ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-left: auto; /* Pushes the list to the right */
+    flex-wrap: wrap; /* Allow the list items to wrap if needed */
+}
+
+.filter li {
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    white-space: nowrap; /* Prevent text from breaking in small items */
+}
+
+.filter li.hidden {
+    display: none;
+}
+}
+
+
+
+
+
+
+
+
+
+      
+      @media (max-width: 768px) {
+        /* Stack input and items on smaller screens */
+        #search-input {
+          flex: 1 1 100%;
+        }
+  
+        ul {
+          justify-content: flex-start; /* Align to the left on small screens */
+        }
+      }
+  
+      @media (max-width: 480px) {
+        /* Increase padding for small screens */
+        #search-input {
+          padding: 8px;
+        }
+  
+        li {
+          padding: 8px 10px;
+          font-size: 14px; /* Slightly reduce text size */
+        }
+      }
+    

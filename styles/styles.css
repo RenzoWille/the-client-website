@@ -46,7 +46,6 @@ header {
 }
 
 body{
-
     .filter {
     display: flex;
     align-items: center;
@@ -85,34 +84,26 @@ body{
 }
 
 
-
-
-
-
-
-
-
       
-      @media (max-width: 768px) {
-        /* Stack input and items on smaller screens */
-        #search-input {
-          flex: 1 1 100%;
-        }
+@media (max-width: 768px) {
+    #search-input {
+    flex: 1 1 100%;
+}
   
-        ul {
-          justify-content: flex-start; /* Align to the left on small screens */
-        }
-      }
+ul {
+    justify-content: flex-start; /* Align to the left on small screens */
+    }
+}
   
-      @media (max-width: 480px) {
-        /* Increase padding for small screens */
-        #search-input {
-          padding: 8px;
-        }
+@media (max-width: 480px) {
+    /* Increase padding for small screens */
+    #search-input {
+    padding: 8px;
+    }
   
-        li {
-          padding: 8px 10px;
-          font-size: 14px; /* Slightly reduce text size */
-        }
-      }
+li {
+    padding: 8px 10px;
+    font-size: 14px; /* Slightly reduce text size */
+    }
+}
     

@@ -30,16 +30,17 @@
 </header>
 
 <body>
-    <article class="filter">
+    <form class="filter">
         <input type="text" id="search-input" placeholder="Zoek een bureau..." onkeyup="filterItems()">
         <ul id="items-list">
-            <li>Expertise</li>
-            <li>Branche</li>
-            <li>Omvang</li>
-            <li>Provincie</li>
-            <li>Sorteren</li>
+            <li><label><input type="checkbox">Expertise</label></li>
+            <li><label><input type="checkbox">Branche</label></li>
+            <li><label><input type="checkbox">Omvang</label></li>
+            <li><label><input type="checkbox">Provincie</label></li>
+            <li><label><input type="checkbox">Sorteren</label></li>
         </ul>
-    </article>
+    </form>
+    
     <section class="block-container">
         <article class="block">
             <img src="sumedia.png">

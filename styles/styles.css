@@ -1,9 +1,9 @@
 *{
     font-family: "Archivo";
 }
+
 /* Stijlen voor het header-gedeelte */
 header {
-    padding: 10px 0;
     h1 {
         font-size: 96px;
     }
@@ -15,11 +15,25 @@ header {
     }
 }
 
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 48px; /* Reduce font size */
+    }
+    header h2 {
+        font-size: 32px; /* Reduce h2 font size */
+    }
+    header p {
+        font-size: 16px;
+    }
+}
+
+
 .topnav {
     display: flex;
     align-items: center; /* Items (img en links) verticaal gecentreerd */
     justify-content: space-between; /* Ruimte tussen de afbeelding en links */
     flex-wrap: wrap; /* Laat de links wrappen op kleinere schermen */
+
     img {
         height: 75px; /* Je kunt de hoogte van het logo aanpassen */
         width: auto; /* Zorgt ervoor dat de breedte automatisch wordt bepaald */
@@ -63,12 +77,21 @@ a.home{
 }
 
 body {
-    display: grid;
-    line-height: 140%;
-    p{
-        font-size: 18px;
+    padding: 10px; /* Add padding for smaller screens */
+    p {
+        font-size: 16px; /* Slightly reduce font size */
     }
 }
+
+@media (max-width: 768px) {
+    body {
+        padding: 5px;
+        p {
+            font-size: 14px; /* Smaller font on mobile */
+        }
+    }
+}
+
 
 .filter {
     display: flex;
@@ -78,6 +101,45 @@ body {
     margin-bottom: 20px;
     padding: 10px;
 }
+
+/* Default styles for the filter (Desktop view) */
+.filter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Items verdeeld over de volledige breedte */
+    flex-wrap: wrap; /* Laat de items wrappen indien nodig */
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+/* Mobile-specific styles to center the filter (only for mobile devices) */
+@media (max-width: 768px) {
+    .filter {
+        flex-direction: column; /* Zet de filter items onder elkaar */
+        justify-content: center; /* Centreer items horizontaal */
+        align-items: center; /* Centreer items verticaal */
+        padding: 10px;
+    }
+
+    .filter ul {
+        justify-content: center; /* Centreer de lijst met filters */
+        width: 100%; /* Laat de lijst de volledige breedte gebruiken */
+        text-align: center; /* Zorg ervoor dat de tekst ook gecentreerd is */
+    }
+
+    .filter li {
+        margin-right: 0; /* Verwijder eventuele marges tussen de filter items */
+        margin-bottom: 10px; /* Voeg een kleine marge aan de onderkant toe */
+        text-align: center; /* Centreer de tekst in elke filter */
+    }
+
+    #search-input {
+        width: 100%; /* Zorg ervoor dat de zoekbalk de volledige breedte heeft */
+        margin-bottom: 10px; /* Voeg wat ruimte onder de zoekbalk toe */
+        text-align: center;
+    }
+}
+
 
 .filter #search-input {
     flex-wrap: wrap;
@@ -96,6 +158,7 @@ body {
     margin: 0;
     margin-left: auto; /* Pushes the list to the right */
     flex-wrap: wrap; /* Allow the list items to wrap if needed */
+
     @media (min-width: 768px) {
         padding: 8px;
         flex: 1 1 1 100% ;
@@ -118,12 +181,18 @@ body {
     display: none;
 }
 
-.block-container{
+.block-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    justify-content: space-between;
+    gap: 20px;
 }
+
+@media (max-width: 768px) {
+    .block-container {
+        grid-template-columns: 1fr; /* Stack all blocks on mobile */
+    }
+}
+
 
 .block{
     border: 1px solid black; 
@@ -203,8 +272,13 @@ footer{
         height: 75px; /* Je kunt de hoogte van het logo aanpassen */
         width: auto;
     }
+    
+    @media (max-width: 768px) {
+        footer {
+            grid-template-columns: 1fr; /* Stack footer sections */
+        }
 }
-
+}
 
 .footer-inloggen{
     text-align: left;

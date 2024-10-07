@@ -1,228 +1,234 @@
 <!DOCTYPE html>
 <html lang="nl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Client Website</title>
-    <link rel="stylesheet" href="styles/styles.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>The Client Website</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">    
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Martian+Mono:wght@100..800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles/styles.css">
+    </head>
+    <body>
+        
+        <header>
+            <nav class="topnav">
+                <img src="logodda.png" alt="logodda">
+                <a href="#Over-ons">Over ons</a>
+                <a href="#Events">Events</a>
+                <a href="#Publicaties">Publicaties</a>
+                <a class="active" href="#Leden">Leden</a>
+                <a href="#Vacatures">Vacatures</a>
+                <div class="right-links">
+                    <a href="#Inloggen">Inloggen</a>
+                    <a href="#Word-lid">Word lid</a>
+                </div>
+            </nav>
+        </header>
 
-<header>
-    <nav class="topnav">
-        <img src="logodda.png" alt="logodda">
-        <a href="#Over-ons">Over ons</a>
-        <a href="#Events">Events</a>
-        <a href="#Publicaties">Publicaties</a>
-        <a class="active" href="#Leden">Leden</a>
-        <a href="#Vacatures">Vacatures</a>
-        <article class="right-links">
-            <a href="#Inloggen">Inloggen</a>
-            <a href="#Word-lid">Word lid</a>
+        <header class="hero">
+            <a href="Home" class="home">← Terug naar home</a>
+            <h1>ONZE LEDEN</h1>
+            <p>De [nummer] beste digitale bureaus van Nederland zijn verenigd in Dutch Digital Agencies. Zet de juiste filters aan en zoek contact met het bureau dat het beste past bij jouw vraagstuk en uitdaging.</p>
+            <p>Ook DDA lid worden? Ga dan naar <a href="Word-lid">deze pagina</a> voor meer informatie</p>
+        </header>
+
+        <form class="filter">
+            <input type="text" id="search-input" placeholder="Zoek een bureau..." onkeyup="filterItems()">
+            <ul id="items-list">
+                <li><label><input type="checkbox">Expertise</label></li>
+                <li><label><input type="checkbox">Branche</label></li>
+                <li><label><input type="checkbox">Omvang</label></li>
+                <li><label><input type="checkbox">Provincie</label></li>
+                <li><label><input type="checkbox">Sorteren</label></li>
+            </ul>
+        </form>
+
+        <section class="block-container">
+            <article class="block">
+                <img src="sumedia.png" alt="sumedia">
+                <p>Strategy</p>
+                <h2>Sumedia</h2>
+                <p>Arnhem</p>
+                <p>25-49 Werknemers</p>
+                <a href="Sumedia">Details></a>
+            </article>
+
+            <article class="block">
+                <img src="msml.png" alt="MSML">
+                <p>Development</p>
+                <h2>MSML</h2>
+                <p>Deventer</p>
+                <p>10-24 Werknemers</p>
+                <a href="MSML">Details></a>
+            </article>
+
+            <article class="block">
+                <img src="essense.png" alt="essense">
+                <p>Service Design</p>
+                <h2>Essense</h2>
+                <p>Amsterdam</p>
+                <p>25-49 Werknemers</p>
+                <a href="Essense">Details></a>
+            </article>
+
+            <article class="block">
+                <img src="cleverfranke.png" alt="cleverfranke">
+                <p>Experience</p>
+                <h2>Clever Franke</h2>
+                <p>Utrecht</p>
+                <p>25-49 Werknemers</p>
+                <a href="CleverFranke">Details></a>
+            </article>
+
+            <article class="block">
+                <img src="informaat.png" alt="informaat">
+                <p>Experience</p>
+                <h2>Informaat</h2>
+                <p>Hilversum</p>
+                <p>50-99 Werknemers</p>
+                <a href="Informaat">Details></a>
+            </article>
+
+            <article class="block">
+                <img src="mediamonks.png" alt="mediamonks">
+                <p>Production</p>
+                <h2>Media.Monks</h2>
+                <p>Hilversum, Amsterdam, Berlijn...</p>
+                <p>1000+ Werknemers</p>
+                <a href="Media.Monks">Details></a>
+            </article>
+        </section>
+
+        <section class="vacatureblok">
+            <h3>Kom werken bij de beste digitale bureaus van Nederland.</h3>
+            <a class="vacaturelink" href="#Vacatures">Bekijk vacatures (54)</a>
+        </section>    
+
+        <section class="block-container">
+            <article class="block">
+                <img src="bfinternet.png" alt="Big-Fat-Internet">
+                <p>Webdesign</p>
+                <h2>Big Fat Internet</h2>
+                <p>Zevenaar</p>
+                <p>25-49 Werknemers</p>
+                <a href="Big-Fat-Internet">Details></a>
+            </article>
+
+            <article class="block">
+                <img src="adwise.png" alt="adwise">
+                <p>Digital</p>
+                <h2>Adwise</h2>
+                <p>Almelo, Utrecht</p>
+                <p>100-249 Werknemers</p>
+                <a href="Adwise">Details></a>
+            </article>
+
+            <article class="block">
+                <img src="uncinc.png" alt="Unc-Inc">
+                <p>Experience</p>
+                <h2>Unc Inc</h2>
+                <p>Amsterdam</p>
+                <p>25-49 Werknemers</p>
+                <a href="Unc-Inc">Details></a>
+            </article>
+
+            <article class="block">
+                <img src="dept.png" alt="Dept">
+                <p>Fullservice</p>
+                <h2>DeptⓇ</h2>
+                <p>Amsterdam, Rotterdam, Zwolle</p>
+                <p>500+ Werknemers</p>
+                <a href="Dept">Details></a>
+            </article>
+
+            <article class="block">
+                <img src="valsplat.png" alt="Valsplat">
+                <p>Design | Research</p>
+                <h2>Valsplat</h2>
+                <p>Amsterdam, Nieuwersluis</p>
+                <p>50-99 Werknemers</p>
+                <a href="Valsplat">Details></a>
+            </article>
+
+            <article class="block">
+                <img src="ksdesign.png" alt="Koos-Service-Design">
+                <p>Service Design</p>
+                <h2>Koos Service Design</h2>
+                <p>Amsterdam, Lissabon, Berlijn</p>
+                <p>50-99 Werknemers</p>
+                <a href="Koos-Service-Design">Details></a>
+            </article>
+        </section>
+        
+        <section class="laden">
+            <p>Meer leden laden...</p>
+        </section>
+
+        <section class="partners">
+            <h2>Wij bedanken onze trouwe partners</h2>
+            <a class=partnerworden href="#Partner-worden">Word partner →</a>
+        </section>
+
+        <article class="partner-carousel">
+            <img src="amac.png" alt="logo amac">
+            <img src="bno.png" alt="logo bno">
+            <img src="ictrecht.png" alt="logo ictrecht">
+            <img src="via.png" alt="logo via">
+            <img src="rootnet.png" alt="logo rootnet">
+            <img src="amac.png" alt="logo amac">
+            <img src="bno.png" alt="logo bno">
+            <img src="ictrecht.png" alt="logo ictrecht">
+            <img src="via.png" alt="logo via">
+            <img src="rootnet.png" alt="logo rootnet">
         </article>
-    </nav>
-</header>
 
-<header class="hero">
-    <a href="Home">Terug naar home</a>
-    <h1>Onze Leden</h1>
-    <p>De [nummer] beste digitale bureaus van Nederland zijn verenigd in Dutch Digital Agencies. Zet de juiste filters aan en zoek contact met het bureau dat het beste past bij jouw vraagstuk en uitdaging.</p>
-    <p>Ook DDA lid worden? Ga dan naar <a href="Word-lid">deze pagina</a> voor meer informatie</p>
-</header>
+        <footer>
+            <div class="footer-inloggen">
+                <img src="logodda.png" alt="logodda">
+                <a href="Inloggen">Inloggen →</a>
+            </div>
 
-<body>
-    <form class="filter">
-        <input type="text" id="search-input" placeholder="Zoek een bureau..." onkeyup="filterItems()">
-        <ul id="items-list">
-            <li><label><input type="checkbox">Expertise</label></li>
-            <li><label><input type="checkbox">Branche</label></li>
-            <li><label><input type="checkbox">Omvang</label></li>
-            <li><label><input type="checkbox">Provincie</label></li>
-            <li><label><input type="checkbox">Sorteren</label></li>
-        </ul>
-    </form>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#Over-ons">Over ons</a></li>
+                    <li><a href="#Events">Events</a></li>
+                    <li><a href="#Publicaties">Publicaties</a></li>
+                    <li><a href="#Leden">Leden</a></li>
+                    <li><a href="#Vacatures">Vacatures</a></li>
+                    <li><a href="#Algemene-voorwaarden">Algemene Voorwaarden</a></li>
+                    <li><a href="#Privacybeleid">Privacybeleid</a></li>
+                    <li><a href="#Events">Events</a></li>
+                </ul>
+            </div>
 
-    <section class="block-container">
-        <article class="block">
-            <img src="sumedia.png" alt="sumedia">
-            <p>Strategy</p>
-            <h2>Sumedia</h2>
-            <p>Arnhem</p>
-            <p>25-49 Werknemers</p>
-            <a href="Sumedia">Details</a>
-        </article>
+            <div class="footer-info">
+                <strong><p>Dutch Digital Agencies</p></strong>
+                <p>Capital C</p>
+                <p>Weesperplein 4B</p>
+                <p>1018 XA Amsterdam</p>
+                <a>(0)85 4010391</a>
+                <a>info@dutchdigitalagencies.com</a>
+            </div>
+        </footer>
 
-        <article class="block">
-            <img src="msml.png" alt="MSML">
-            <p>Development</p>
-            <h2>MSML</h2>
-            <p>Deventer</p>
-            <p>10-24 Werknemers</p>
-            <a href="MSML">Details></a>
-        </article>
+        <section class="footer-2">
+            <div class="socials">
+                <a>Instagram</a>
+                <a>Facebook</a>
+                <a>Linkedin</a>
+            </div>
 
-        <article class="block">
-            <img src="essense.png" alt="essense">
-            <p>Service Design</p>
-            <h2>Essense</h2>
-            <p>Amsterdam</p>
-            <p>25-49 Werknemers</p>
-            <a href="Essense">Details></a>
-        </article>
+            <div class="copyright">
+                <p>Copyright ⓒ 2024 Dutch Digital Agencies</p>
+            </div>
+        </section>
 
-        <article class="block">
-            <img src="cleverfranke.png" alt="cleverfranke">
-            <p>Experience</p>
-            <h2>Clever Franke</h2>
-            <p>Utrecht</p>
-            <p>25-49 Werknemers</p>
-            <a href="CleverFranke">Details></a>
-        </article>
+        <script src="script.js"></script>
 
-        <article class="block">
-            <img src="informaat.png" alt="informaat">
-            <p>Experience</p>
-            <h2>Informaat</h2>
-            <p>Hilversum</p>
-            <p>50-99 Werknemers</p>
-            <a href="Informaat">Details</a>
-        </article>
+    </body>
 
-        <article class="block">
-            <img src="mediamonks.png" alt="mediamonks">
-            <p>Production</p>
-            <h2>Media.Monks</h2>
-            <p>Hilversum, Amsterdam, Berlijn...</p>
-            <p>1000+ Werknemers</p>
-            <a href="Media.Monks">Details</a>
-        </article>
-    </section>
-
-    <article class="vacture">
-        <h3>Kom werken bij de beste digitale bureaus van Nederland.</h3>
-        <a href="#Vacatures">Vacatures</a>
-    </article>
-
-    <section class="block-container">
-        <article class="block">
-            <img src="bfinternet.png" alt="Big-Fat-Internet">
-            <p>Webdesign</p>
-            <h2>Big Fat Internet</h2>
-            <p>Zevenaar</p>
-            <p>25-49 Werknemers</p>
-            <a href="Big-Fat-Internet">Details</a>
-        </article>
-
-        <article class="block">
-            <img src="adwise.png" alt="adwise">
-            <p>Digital</p>
-            <h2>Adwise</h2>
-            <p>Almelo, Utrecht</p>
-            <p>100-249 Werknemers</p>
-            <a href="Adwise">Details</a>
-        </article>
-
-        <article class="block">
-            <img src="uncinc.png" alt="Unc-Inc">
-            <p>Experience</p>
-            <h2>Unc Inc</h2>
-            <p>Amsterdam</p>
-            <p>25-49 Werknemers</p>
-            <a href="Unc-Inc">Details</a>
-        </article>
-
-        <article class="block">
-            <img src="dept.png" alt="Dept">
-            <p>Fullservice</p>
-            <h2>DeptⓇ</h2>
-            <p>Amsterdam, Rotterdam, Zwolle</p>
-            <p>500+ Werknemers</p>
-            <a href="Dept">Details</a>
-        </article>
-
-        <article class="block">
-            <img src="valsplat.png" alt="Valsplat">
-            <p>Design | Research</p>
-            <h2>Valsplat</h2>
-            <p>Amsterdam, Nieuwersluis</p>
-            <p>50-99 Werknemers</p>
-            <a href="Valsplat">Details</a>
-        </article>
-
-        <article class="block">
-            <img src="ksdesign.png" alt="Koos-Service-Design">
-            <p>Service Design</p>
-            <h2>Koos Service Design</h2>
-            <p>Amsterdam, Lissabon, Berlijn</p>
-            <p>50-99 Werknemers</p>
-            <a href="Koos-Service-Design">Details</a>
-        </article>
-    </section>
-    
-    <section class="laden">
-        <p>Meer leden laden...</p>
-    </section>
-
-    <section class="partners">
-        <h2>Wij bedanken onze trouwe partners</h2>
-        <a href="#Partner-worden">Word partner</a>
-    </section>
-
-    <article class="partner-carousel">
-        <img src="amac.png" alt="logo amac">
-        <img src="bno.png" alt="logo bno">
-        <img src="ictrecht.png" alt="logo ictrecht">
-        <img src="via.png" alt="logo via">
-        <img src="rootnet.png" alt="logo rootnet">
-        <img src="amac.png" alt="logo amac">
-        <img src="bno.png" alt="logo bno">
-        <img src="ictrecht.png" alt="logo ictrecht">
-        <img src="via.png" alt="logo via">
-        <img src="rootnet.png" alt="logo rootnet">
-    </article>
-</body>
-
-<footer>
-    <div class="footer-inloggen">
-        <img src="logodda.png" alt="logodda">
-        <a href="Inloggen">Inloggen</a>
-    </div>
-
-    <div class="footer-links">
-        <ul>
-            <li>
-             <a href="#Over-ons">Over ons</a>
-             <a href="#Events">Events</a>
-             <a href="#Publicaties">Publicaties</a>
-             <a href="#Leden">Leden</a>
-             <a href="#Vacatures">Vacatures</a>
-             <a href="#Algemene-voorwaarden">Algemene Voorwaarden</a>
-             <a href="#Privacybeleid">Privacybeleid</a>
-             <a href="#Events">Events</a>
-        </li>
-        </ul>
-    </div>
-
-    <div class="footer-info">
-        <strong><p>Dutch Digital Agencies</p></strong>
-        <p>Capital C</p>
-        <p>Weesperplein 4B</p>
-        <p>1018 XA Amsterdam</p>
-        <a>(0)85 4010391</a>
-        <a>info@dutchdigitalagencies.com</a>
-    </div>
-</footer>
-
-<footer-2>
-    <div class="socials">
-        <a>Instagram</a>
-        <a>Facebook</a>
-        <a>Linkedin</a>
-    </div>
-
-    <div class="copyright">
-        <p>Copyright ⓒ 2024 Dutch Digital Agencies</p>
-    </div>
-</footer-2>
-
-<script src="script.js"></script>
 </html>

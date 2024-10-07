@@ -1,31 +1,35 @@
 *{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Archivo";
 }
 /* Stijlen voor het header-gedeelte */
 header {
     padding: 10px 0;
+    h1 {
+        font-size: 96px;
+    }
+    h2 {
+        font-size: 64px;
+    }
+    p {
+        font-size: 18px;
+    }
 }
 
-/* Flexbox voor de .topnav container */
 .topnav {
     display: flex;
     align-items: center; /* Items (img en links) verticaal gecentreerd */
     justify-content: space-between; /* Ruimte tussen de afbeelding en links */
     flex-wrap: wrap; /* Laat de links wrappen op kleinere schermen */
-}
-
-/* Stijlen voor het logo */
-.topnav img {
-    height: 75px; /* Je kunt de hoogte van het logo aanpassen */
-    width: auto; /* Zorgt ervoor dat de breedte automatisch wordt bepaald */
-}
-
-/* Stijlen voor de menu links */
-.topnav a {
-    margin-left: 10px; /* Ruimte tussen de links en het logo */
-    text-decoration: none; /* Verwijder de onderstreping van de links */
-    color: black; /* Kleur van de links */
-    font-size: 16px; /* Tekstgrootte van de links */
+    img {
+        height: 75px; /* Je kunt de hoogte van het logo aanpassen */
+        width: auto; /* Zorgt ervoor dat de breedte automatisch wordt bepaald */
+    }
+    a {
+        margin-left: 10px; /* Ruimte tussen de links en het logo */
+        text-decoration: none; /* Verwijder de onderstreping van de links */
+        color: black; /* Kleur van de links */
+        font-size: 16px; /* Tekstgrootte van de links */
+    }
 }
 
 .right-links {
@@ -33,31 +37,56 @@ header {
     display: flex;
 }
 
-/* Optioneel: Stijlen voor het menu op kleinere schermen */
-@media (max-width: 768px) {
-    .topnav {
-        flex-direction: column; /* Stapel de img en links verticaal op kleinere schermen */
+.hero{
+    text-align: center;
+
+    h1 {
+    font-size: 96px;
     }
 
-    .topnav a {
-        margin: 10px 0; /* Zorgt voor ruimte tussen de links op mobiele apparaten */
-        align-items: flex-end;
+    p {
+        font-size: 18px;
+        margin: 0 auto;
+        padding: 10px; 
+    }
+
+    a {
+        font-size: 16px;
+        color: black;
     }
 }
 
-body{
-    .filter {
+
+a.home{
+    text-decoration: none;
+    color: black;
+}
+
+body {
+    display: grid;
+    line-height: 140%;
+    p{
+        font-size: 18px;
+    }
+}
+
+.filter {
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap; /* Allow wrapping on small screens */
     margin-bottom: 20px;
+    padding: 10px;
 }
 
 .filter #search-input {
+    flex-wrap: wrap;
     padding: 10px;
     font-size: 16px;
     margin-bottom: 10px;
+    @media (max-width: 768px) {
+        padding: 8px;
+    }
 }
 
 .filter ul {
@@ -67,43 +96,176 @@ body{
     margin: 0;
     margin-left: auto; /* Pushes the list to the right */
     flex-wrap: wrap; /* Allow the list items to wrap if needed */
-}
+    @media (min-width: 768px) {
+        padding: 8px;
+        flex: 1 1 1 100% ;
+    }
 
-.filter li {
-    padding: 10px 20px;
-    border: 1px solid #ddd;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    cursor: pointer;
-    white-space: nowrap; /* Prevent text from breaking in small items */
+    li {
+        padding: 10px 20px;
+        border: 1px solid #000000;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        cursor: pointer;
+        white-space: nowrap;
+        @media (min-width: 768px) {
+            padding: 8px;
+        }
+    }
 }
 
 .filter li.hidden {
     display: none;
 }
+
+.block-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-content: space-between;
+}
+
+.block{
+    border: 1px solid black; 
+    padding: 5px;
+    display: block;
+    img{
+        max-width: 90%;
+        max-height: 90%;
+        display: block;
+    }
+}
+
+.vacatureblok {
+    display: flex;
+    justify-content: space-between; /* Plaats de elementen aan beide uiteinden */
+    align-items: center; /* Centreer de elementen verticaal binnen de container */
+    padding: 20px;
+    border: 1px solid #000000;
+    h3{
+        margin: 0; 
+        flex: 1; 
+    }
+}
+
+.vacaturelink {
+    padding: 10px 20px;
+    margin-left: 20px; 
+    white-space: nowrap; 
+    display: inline-block; /* Zorg ervoor dat de link inline blijft met de h3 */
 }
 
 
-      
-@media (max-width: 768px) {
-    #search-input {
-    flex: 1 1 100%;
+.laden{
+    border: 1px solid black;
+    text-align: center;
 }
-  
-ul {
-    justify-content: flex-start; /* Align to the left on small screens */
+
+.partners{
+    display: flex;
+    padding: 20px;
+    margin: 0;
+    flex-wrap: wrap;
+    border: 1px solid #000000;
+}
+
+.partnerworden{
+    padding: 10px 20px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    align-content: center;
+    text-decoration: none;
+    color: black;
+    border: 1px solid black;
+}
+
+.partner-carousel{
+    display: flex;
+    overflow-x:hidden;
+    align-items: center;
+    border: 1px solid black;
+    img{
+        width: 150px;
+        height: 150px;
+        border: 1px solid black;
+        align-content: center;
+        justify-items: center;
     }
 }
-  
-@media (max-width: 480px) {
-    /* Increase padding for small screens */
-    #search-input {
-    padding: 8px;
-    }
-  
-li {
-    padding: 8px 10px;
-    font-size: 14px; /* Slightly reduce text size */
+
+footer{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    border: 1px solid black;
+
+    img{
+        height: 75px; /* Je kunt de hoogte van het logo aanpassen */
+        width: auto;
     }
 }
-    
+
+
+.footer-inloggen{
+    text-align: left;
+    padding: 15px;
+    border: 1px solid black;
+
+    img{
+        display: block;
+    }
+
+    a{
+        display: block;
+        margin-top: 10em;
+        text-decoration: none; 
+    }
+}
+
+.footer-links{
+    border: 1px solid black;
+
+    ul{
+        list-style-type: none; /* Verwijder de standaard bullets van de lijst */
+        padding: 0; /* Verwijder standaard padding */
+        margin: 10px;
+        text-align: left; /* Zorg ervoor dat de links links zijn uitgelijnd */
+    }
+
+    li{
+        margin-bottom: 10px;
+    }
+
+    a{
+        color: black; /* Stel de kleur van de links in */
+        font-size: 16px; /* Stel de grootte van de tekst in */
+    }
+}
+
+.footer-info{
+    border: 1px solid black;
+    padding-left: 5px;
+}
+
+.footer-2{
+    display: flex;
+    border: 1px solid black;
+}
+
+.socials{
+    padding-top: 15px;
+    padding-left: 10px;
+
+    a{
+        text-decoration: underline;
+    }
+}
+
+.copyright{
+    margin-left: auto;
+    padding-right: 10px;
+
+    p{
+        font-size: 16px;
+    }
+}

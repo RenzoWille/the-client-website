@@ -389,7 +389,6 @@ body {
 
 footer{
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
     border: 1px solid black;
     width: 100%;
 
@@ -397,15 +396,12 @@ footer{
         height: 75px;
         width: auto;
     }
-    
-    @media (max-width: 768px) {
-        footer {
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: 1fr 1fr 1fr;
-            width: 100%;
-        }
-}
+
+    @media (min-width: 768px) {
+        grid-template-columns: 2fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        height: 296px;
+    }
 }
 
 .footer-inloggen {
@@ -459,7 +455,8 @@ footer{
     @media (max-width: 768px){
         grid-column: 1;
         grid-row: 2;
-        width: 100%;
+        width: auto;
+        height: 296px;
     }
 }
 

@@ -2,16 +2,19 @@
 
 Ontwerp en maak een website voor een opdrachtgever en bespreek het resultaat tijdens de Sprint Review.
 
-De instructie van deze leertaak staan in de [INSTRUCTIONS](https://github.com/fdnd-task/the-client-website/blob/main/docs/INSTRUCTIONS.md)
-
-
-
 ## Inhoudsopgave Readme
 
+  * [Intro](#intro)
   * [Beschrijving](#beschrijving)
   * [Kenmerken](#kenmerken)
-  * [Bronnen](#bronnen)
   * [Licentie](#licentie)
+
+## Intro
+Begin de Readme met een korte uitleg over de opdracht, schrijf hier bijvoorbeeld de vraag van de opdrachtgever. Maak via Github Pages een url van je project en voeg deze ook toe aan de Readme.
+
+Voor deze sprint kregen we de opdracht van de opdrachtgevers om het nieuwe ontwerp voor de website van DDA te bouwen. Hierbij begonnen we met het schrijven van de HTML, en daarna het schrijven van de CSS.
+
+De vraag van de opdrachtgever was dus de website zo goed mogelijk te kunnen bouwen, waarbij we per persoon een pagina hebben gekozen om te gaan bouwen. Ik heb gekozen om de "Onze Leden" pagina te bouwen. 
 
 ## Beschrijving
 <!-- In de Beschrijving staat hoe je project er uit ziet, hoe het werkt en wat je er mee kan. -->

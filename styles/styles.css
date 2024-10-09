@@ -255,7 +255,6 @@ body {
 .block-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr; /* Drie kolommen op grotere schermen */
-    gap: 20px;
     width: 100%;
 }
 
@@ -265,7 +264,7 @@ body {
     display: block;
     width: fit-content;
 
-    .block img {
+    img {
         width: 100%; /* Zorgt ervoor dat de afbeelding de volledige breedte van het blok inneemt */
         height: auto;
         justify-content: center;
@@ -436,6 +435,7 @@ footer{
 
 .footer-links{
     border: 1px solid black;
+    
     ul{
         list-style-type: none; /* Verwijder de standaard bullets van de lijst */
         padding: 0; 

@@ -21,6 +21,8 @@ De link naar de pagina: https://renzowille.github.io/the-client-website/
 
 De mobiele versie van de pagina:
 
+<img src="
+
 <!-- In de Beschrijving staat hoe je project er uit ziet, hoe het werkt en wat je er mee kan. -->
 <!-- Voeg een mooie poster visual toe 📸 -->
 <!-- Voeg een link toe naar Github Pages 🌐-->

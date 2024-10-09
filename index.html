@@ -11,30 +11,60 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Martian+Mono:wght@100..800&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="styles/styles.css">
+        <script src="script.js" defer></script>
     </head>
     <body>
         
-        <header>
-            <nav class="topnav">
-                <img src="logodda.png" alt="logodda">
+    <header>
+        <nav class="topnav">
+            <img src="logodda.png" alt="logodda">
+                
+                <!-- Navigation links for desktop -->
+            <div class="nav-links">
                 <a href="#Over-ons">Over ons</a>
                 <a href="#Events">Events</a>
                 <a href="#Publicaties">Publicaties</a>
                 <a class="active" href="#Leden">Leden</a>
                 <a href="#Vacatures">Vacatures</a>
-                <div class="right-links">
-                    <a href="#Inloggen">Inloggen</a>
-                    <a href="#Word-lid">Word lid</a>
-                </div>
-            </nav>
-        </header>
-
-        <header class="hero">
-            <a href="Home" class="home">← Terug naar home</a>
-            <h1>ONZE LEDEN</h1>
-            <p>De [nummer] beste digitale bureaus van Nederland zijn verenigd in Dutch Digital Agencies. Zet de juiste filters aan en zoek contact met het bureau dat het beste past bij jouw vraagstuk en uitdaging.</p>
-            <p>Ook DDA lid worden? Ga dan naar <a href="Word-lid">deze pagina</a> voor meer informatie</p>
-        </header>
+            </div>
+        
+                <!-- Right-side links for desktop -->
+            <div class="right-links">
+                <a href="#Inloggen">Inloggen</a>
+                <a href="#Word-lid">Word lid</a>
+            </div>
+        
+                <!-- Hamburger icon for mobile -->
+            <div class="hamburger" id="hamburger">
+                &#9776; <!-- Hamburger icon -->
+            </div>
+        
+                <!-- Mobile menu: all links (nav-links and right-links combined) -->
+            <div class="mobile-menu" id="mobile-menu">
+                <a href="#Over-ons">Over ons</a>
+                <a href="#Events">Events</a>
+                <a href="#Publicaties">Publicaties</a>
+                <a class="active" href="#Leden">Leden</a>
+                <a href="#Vacatures">Vacatures</a>
+                <a href="#Inloggen">Inloggen</a>
+                <a href="#Word-lid">Word lid</a>
+            </div>
+        </nav>
+    </header>
+        
+    <script>
+        document.getElementById("hamburger").addEventListener("click", function() {
+            var menu = document.getElementById("mobile-menu");
+            menu.classList.toggle("active"); // Toggle the 'active' class to show/hide the menu
+        });
+    </script>
+                
+    <header class="hero">
+        <a href="Home" class="home">← Terug naar home</a>
+        <h1>ONZE LEDEN</h1>
+        <p>De [nummer] beste digitale bureaus van Nederland zijn verenigd in Dutch Digital Agencies. Zet de juiste filters aan en zoek contact met het bureau dat het beste past bij jouw vraagstuk en uitdaging.</p>
+        <p>Ook DDA lid worden? Ga dan naar <a href="Word-lid">deze pagina</a> voor meer informatie</p>
+    </header>
 
         <form class="filter">
             <input type="text" id="search-input" placeholder="Zoek een bureau..." onkeyup="filterItems()">
@@ -50,7 +80,7 @@
         <section class="block-container">
             <article class="block">
                 <img src="sumedia.png" alt="sumedia">
-                <p>Strategy</p>
+                <p class="strategy">Strategy</p>
                 <h2>Sumedia</h2>
                 <p>Arnhem</p>
                 <p>25-49 Werknemers</p>
@@ -59,7 +89,7 @@
 
             <article class="block">
                 <img src="msml.png" alt="MSML">
-                <p>Development</p>
+                <p class="strategy">Development</p>
                 <h2>MSML</h2>
                 <p>Deventer</p>
                 <p>10-24 Werknemers</p>
@@ -68,7 +98,7 @@
 
             <article class="block">
                 <img src="essense.png" alt="essense">
-                <p>Service Design</p>
+                <p class="strategy">Service Design</p>
                 <h2>Essense</h2>
                 <p>Amsterdam</p>
                 <p>25-49 Werknemers</p>
@@ -77,7 +107,7 @@
 
             <article class="block">
                 <img src="cleverfranke.png" alt="cleverfranke">
-                <p>Experience</p>
+                <p class="strategy">Experience</p>
                 <h2>Clever Franke</h2>
                 <p>Utrecht</p>
                 <p>25-49 Werknemers</p>
@@ -86,7 +116,7 @@
 
             <article class="block">
                 <img src="informaat.png" alt="informaat">
-                <p>Experience</p>
+                <p class="strategy">Experience</p>
                 <h2>Informaat</h2>
                 <p>Hilversum</p>
                 <p>50-99 Werknemers</p>
@@ -95,7 +125,7 @@
 
             <article class="block">
                 <img src="mediamonks.png" alt="mediamonks">
-                <p>Production</p>
+                <p class="strategy">Production</p>
                 <h2>Media.Monks</h2>
                 <p>Hilversum, Amsterdam, Berlijn...</p>
                 <p>1000+ Werknemers</p>
@@ -111,7 +141,7 @@
         <section class="block-container">
             <article class="block">
                 <img src="bfinternet.png" alt="Big-Fat-Internet">
-                <p>Webdesign</p>
+                <p class="strategy">Webdesign</p>
                 <h2>Big Fat Internet</h2>
                 <p>Zevenaar</p>
                 <p>25-49 Werknemers</p>
@@ -120,7 +150,7 @@
 
             <article class="block">
                 <img src="adwise.png" alt="adwise">
-                <p>Digital</p>
+                <p class="strategy">Digital</p>
                 <h2>Adwise</h2>
                 <p>Almelo, Utrecht</p>
                 <p>100-249 Werknemers</p>
@@ -129,7 +159,7 @@
 
             <article class="block">
                 <img src="uncinc.png" alt="Unc-Inc">
-                <p>Experience</p>
+                <p class="strategy">Experience</p>
                 <h2>Unc Inc</h2>
                 <p>Amsterdam</p>
                 <p>25-49 Werknemers</p>
@@ -138,7 +168,7 @@
 
             <article class="block">
                 <img src="dept.png" alt="Dept">
-                <p>Fullservice</p>
+                <p class="strategy">Fullservice</p>
                 <h2>DeptⓇ</h2>
                 <p>Amsterdam, Rotterdam, Zwolle</p>
                 <p>500+ Werknemers</p>
@@ -147,7 +177,8 @@
 
             <article class="block">
                 <img src="valsplat.png" alt="Valsplat">
-                <p>Design | Research</p>
+                <p class="strategy">Design</p>
+                <p class="strategy">Research</p>
                 <h2>Valsplat</h2>
                 <p>Amsterdam, Nieuwersluis</p>
                 <p>50-99 Werknemers</p>
@@ -156,7 +187,7 @@
 
             <article class="block">
                 <img src="ksdesign.png" alt="Koos-Service-Design">
-                <p>Service Design</p>
+                <p class="strategy">Service Design</p>
                 <h2>Koos Service Design</h2>
                 <p>Amsterdam, Lissabon, Berlijn</p>
                 <p>50-99 Werknemers</p>
@@ -226,8 +257,6 @@
                 <p>Copyright ⓒ 2024 Dutch Digital Agencies</p>
             </div>
         </section>
-
-        <script src="script.js"></script>
 
     </body>
 
